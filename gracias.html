@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gracias</title>
+</head>
+<body>
+  <h1 id="mensaje">Gracias por tu envío</h1>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get("nombre");
+    if (nombre) {
+      document.getElementById("mensaje").textContent = `¡Gracias, ${decodeURIComponent(nombre)}! Tu registro ha sido creado.`;
+    }
+  </script>
+</body>
+</html>
